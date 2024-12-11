@@ -1,18 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import MyProfilePic from "./components/MyProfilePic";
+import './globals.css'
+import Navbar from './components/Navbar'
+import MyProfilePic from './components/MyProfilePic'
 
-export const metadata: Metadata = {
-  title: "Next-Blog",
-  description: "Created by Sina Zinsaz",
-};
+export const metadata = {
+  title: "Dave's Blog",
+  description: 'Created by Dave Gray',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <body className="dark:bg-slate-800">
@@ -21,5 +20,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }
